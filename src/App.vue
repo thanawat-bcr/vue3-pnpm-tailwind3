@@ -1,9 +1,24 @@
-<script setup lang="ts">
-</script>
-
 <template lang="pug">
-.text-green-900.underline.font-bold.text-4xl Hello World
+.app
+  .text-6xl.text-red-900.underline.font-bold {{ title }}
 </template>
 
-<style scoped>
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+
+const App = defineComponent({
+  setup() {
+    const title = ref('Hello World');
+
+    return {
+      title,
+    };
+  },
+});
+
+export default App;
+</script>
+
+<style lang="scss">
+// .app {}
 </style>
